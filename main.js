@@ -107,7 +107,13 @@ class Grid {
   }
   
   isAlive(i,j){
-    return this.cells[mod(i,this.size)][mod(j,this.size)]==1;
+    // Mirrored edges
+    //return this.cells[mod(i,this.size)][mod(j,this.size)]==1;
+
+    // Unmirrored edges
+    if(i >= 0 && i < this.size && j >= 0 && j < this.size)
+      return this.cells[i][j]==1;
+    return 0;
   }
   
   flushDraw(){
