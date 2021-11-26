@@ -93,7 +93,6 @@ function matchNumericString(str, min, max, defaultValue) {
   }
   catch(err){
   }
-  console.log(matched)
   return matched;
 }
 
@@ -277,7 +276,6 @@ function paint(){
       mouseY > 0 && mouseY < screen.height){
       let i = Math.floor(mouseY/(screen.height/grid.size));
       let j = Math.floor(mouseX/(screen.width/grid.size));
-      console.log(i, j);
       if(mouseButton === LEFT){
         grid.cells[i][j] = 1;
         nextGrid.cells[i][j] = 1;
